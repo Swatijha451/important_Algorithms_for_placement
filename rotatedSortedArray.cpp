@@ -13,9 +13,9 @@ int rotatedSortedArray(vector<int> vec, int target)
         {
             return mid;
         }
-        if (vec[start] <= vec[mid])
-        { // left part is sorted
-            if (vec[start] <= target && target <= vec[mid])
+        if (vec[start] <= vec[mid]) // left rotaed arry
+        {                           // left part is sorted
+            if (vec[start] <= target && target < vec[mid])
             {
                 end = mid - 1; // serch in sorted part
             }
@@ -26,7 +26,7 @@ int rotatedSortedArray(vector<int> vec, int target)
         }
         else
         { // right part is sorted
-            if (vec[mid] <= target && target <= vec[end])
+            if (vec[mid] < target && target <= vec[end])
             {
                 start = mid + 1; // serch in sorted part
             }

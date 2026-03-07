@@ -24,7 +24,6 @@ vector<int> bruteForce(vector<int> vec, int target)
 vector<int> twoPointerPairSum(vector<int> nums, int target)
 {
     vector<int> ans;
-    ;
     int first = 0;
     int last = nums.size() - 1;
     while (first < last)
