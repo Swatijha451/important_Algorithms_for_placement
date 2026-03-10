@@ -13,7 +13,7 @@ int bruteForceApproach(vector<int> vec) // O(n) time comlexity;
     }
     return ans;
 }
-int singleElementSortedArry(vector<int> vec)
+int singleElementSortedArry(vector<int> vec) // O()
 {
     int start = 0;
     int end = vec.size() - 1;
