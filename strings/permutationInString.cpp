@@ -12,7 +12,7 @@ step 3:check the two array for freaquancy of the character if its same-> permuti
 
 bool checkFreqencyArray(int arr1[], int arr2[])
 {
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; i < 26; i++) // fixed lenth loop //Tc=O(1)
     {
         if (arr1[i] != arr2[i])
         {
@@ -23,8 +23,8 @@ bool checkFreqencyArray(int arr1[], int arr2[])
 }
 bool permutationInString(string str1, string str2)
 {
-    int permFreq[26] = {0}; // there are 26 smallcase english alphabets
-    for (int i = 0; i < str1.length(); i++)
+    int permFreq[26] = {0};                 // there are 26 smallcase english alphabets
+    for (int i = 0; i < str1.length(); i++) // O(n)
     {
         int idx = str1[i] - 'a'; // index a->96-96=0, similarly b-1,c-2 and so on. if the str1[i] match with index freq++
         permFreq[idx]++;
@@ -32,7 +32,7 @@ bool permutationInString(string str1, string str2)
 
     int windowSize = str1.length();
 
-    for (int i = 0; i < str2.length(); i++)
+    for (int i = 0; i < str2.length(); i++) // O(n2)
     {
         int windFreq[26] = {0};
 
